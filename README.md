@@ -1,8 +1,6 @@
-# Hello Easy Flows
+# Hello LiteFlow
 
-> https://github.com/j-easy/easy-flows
-
-![easy-flows](easy-flows.png)
+> https://github.com/dromara/liteflow
 
 ```sh
 mvn compile exec:java -Dexec.mainClass="org.feuyeux.workflow.HelloEasyFlows" -Dexec.args="Hello EasyFlows"
