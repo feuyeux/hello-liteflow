@@ -6,7 +6,7 @@
   <artifactId>hello-liteflow</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <properties>
-    <log4j-slf4j.version>2.20.0</log4j-slf4j.version>
+    <log4j-slf4j.version>2.23.1</log4j-slf4j.version>
     <lombok.version>1.18.32</lombok.version>
     <liteflow.version>2.11.2</liteflow.version>
   </properties>
