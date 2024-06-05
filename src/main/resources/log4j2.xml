@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="INFO">
-  <Appenders>
-    <Console follow="true" name="Console" target="SYSTEM_OUT">
-      <PatternLayout pattern="%style{%d{HH:mm:ss.SSS}}{red} %c %highlight{%msg%n}"/>
-    </Console>
-  </Appenders>
-  <Loggers>
-    <Root level="INFO">
-      <AppenderRef ref="Console"/>
-    </Root>
-  </Loggers>
+    <Appenders>
+        <Console follow="true" name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%style{%d{HH:mm:ss.SSS}}{red} %c %highlight{%msg%n}"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+        </Root>
+        <Logger name="com.yomahub" level="ERROR" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+    </Loggers>
 </Configuration>

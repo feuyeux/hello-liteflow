@@ -5,24 +5,36 @@
   <groupId>org.feuyeux.workflow</groupId>
   <artifactId>hello-liteflow</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+    <log4j-slf4j.version>2.23.1</log4j-slf4j.version>
+    <lombok.version>1.18.32</lombok.version>
+    <liteflow.version>2.11.2</liteflow.version>
+  </properties>
 
   <dependencies>
     <dependency>
       <groupId>com.yomahub</groupId>
       <artifactId>liteflow-core</artifactId>
-      <version>2.11.2</version>
+      <version>${liteflow.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-slf4j-impl</artifactId>
-      <version>2.20.0</version>
+      <version>${log4j-slf4j.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.30</version>
+      <version>${lombok.version}</version>
     </dependency>
   </dependencies>
 
@@ -32,7 +44,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.11.0</version>
+        <version>3.13.0</version>
         <configuration>
           <encoding>UTF-8</encoding>
           <release>21</release>
