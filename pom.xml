@@ -5,10 +5,11 @@
   <groupId>org.feuyeux.workflow</groupId>
   <artifactId>hello-liteflow</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <properties>
     <log4j-slf4j.version>2.20.0</log4j-slf4j.version>
-    <lombok.version>1.18.30</lombok.version>
-    <liteflow.version>2.12.1</liteflow.version>
+    <lombok.version>1.18.32</lombok.version>
+    <liteflow.version>2.11.2</liteflow.version>
   </properties>
 
   <dependencies>
