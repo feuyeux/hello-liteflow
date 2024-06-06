@@ -5,13 +5,11 @@
         <node id="b" class="org.feuyeux.workflow.comp.HelloNode"/>
         <node id="x" class="org.feuyeux.workflow.comp.HelloNodeSwitch"/>
     </nodes>
+
     <chain name="hello-sequential-chain">
         THEN(a,b);
     </chain>
     <chain name="hello-sequential-switch-chain">
-        SWITCH(x).to(
-            a.tag("cat"),
-            b.tag("dog")
-        );
+        SWITCH(x).to( a.tag("cat"), b.tag("dog"))
     </chain>
 </flow>

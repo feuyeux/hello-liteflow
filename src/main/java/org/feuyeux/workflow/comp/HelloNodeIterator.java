@@ -1,4 +1,3 @@
 package org.feuyeux.workflow.comp;
 
-public class HelloNodeIterator {
-}
+public class HelloNodeIterator {}
