@@ -10,8 +10,8 @@ public class HelloNode extends NodeComponent {
     public void process() {
         String nodeId = this.getNodeId();
         String message = this.getSlot().getRequestData();
-        log.info("{} input:{}", nodeId, message);
-        String responseMessage = String.format("HelloNode[%s] say bonjour", nodeId);
-        this.getSlot().setOutput(nodeId,responseMessage);
+        log.info("nodeId:{} requestData:{}", nodeId, message);
+        String responseMessage = String.format("HelloNode[%s] say %s", nodeId, message);
+        this.getSlot().setOutput(nodeId, responseMessage);
     }
 }

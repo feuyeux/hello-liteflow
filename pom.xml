@@ -7,12 +7,14 @@
   <version>0.0.1-SNAPSHOT</version>
   
   <properties>
+    <liteflow.version>2.12.1</liteflow.version>
     <log4j-slf4j.version>2.23.1</log4j-slf4j.version>
     <lombok.version>1.18.32</lombok.version>
-    <liteflow.version>2.11.2</liteflow.version>
+    <junit.version>5.10.1</junit.version>
   </properties>
 
   <dependencies>
+    <!-- https://github.com/dromara/liteflow/tags -->
     <dependency>
       <groupId>com.yomahub</groupId>
       <artifactId>liteflow-core</artifactId>
@@ -36,6 +38,14 @@
       <artifactId>lombok</artifactId>
       <version>${lombok.version}</version>
     </dependency>
+
+    <!-- junit5 -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -48,6 +58,28 @@
         <configuration>
           <encoding>UTF-8</encoding>
           <release>21</release>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.spotify.fmt</groupId>
+        <artifactId>fmt-maven-plugin</artifactId>
+        <version>2.21.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>format</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.3</version>
+        <configuration>
+          <argLine>
+            -XX:+EnableDynamicAgentLoading
+          </argLine>
         </configuration>
       </plugin>
     </plugins>

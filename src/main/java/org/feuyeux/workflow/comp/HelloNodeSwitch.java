@@ -7,12 +7,18 @@ import java.util.Random;
 
 @Slf4j
 public class HelloNodeSwitch extends NodeSwitchComponent {
-    private final Random random=new Random();
+    private final Random random = new Random();
+
     @Override
-    public String processSwitch() throws Exception {
+    public String processSwitch() {
         String nodeId = this.getNodeId();
         String message = this.getSlot().getRequestData();
-        log.info("{} input:{}", nodeId, message);
+        String tag = buildTag();
+        log.info("nodeId:{} requestData:{}, tag:{}", nodeId, message, tag);
+        return tag;
+    }
+
+    private String buildTag() {
         if (random.nextBoolean()) {
             return "tag:dog";
         }
