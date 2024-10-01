@@ -8,7 +8,7 @@
   
   <properties>
     <liteflow.version>2.12.2.3</liteflow.version>
-    <log4j-slf4j.version>2.23.1</log4j-slf4j.version>
+    <log4j-slf4j.version>2.24.1</log4j-slf4j.version>
     <lombok.version>1.18.34</lombok.version>
     <junit.version>5.11.0</junit.version>
   </properties>
